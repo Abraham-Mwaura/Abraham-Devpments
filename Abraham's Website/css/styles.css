@@ -1,0 +1,313 @@
+
+/*
+COLOR PALETTE
+# F7FFF7-almost white
+rgb(15,127,255)
+#343434-dark grey -almost black
+rgb(52,52,52)
+#2F3061-blue dark
+rgb(47,48,97)
+#FFE660-yellow
+rgb(255,230,96)
+#AIC607-blue light
+*/
+
+/* Global styles*/
+html{
+  box-sizing: border-box;
+}
+*, *:before,*:after{
+  box-sizing: inherit;
+}
+
+body  {
+  color:#343434;
+  margin: 0;
+  padding: 0;
+  font-family:'Montserrat', sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+}
+img{
+  width: 400px;
+}
+a{
+  color:#FFE660;
+}
+a:hover{
+  text-decoration: none;
+}
+h1{
+  font-size: 60px;
+  /* margin: 0; */
+}
+h2{
+  margin: 0;
+  font-size: 45px;
+}
+
+
+h1,h2{
+  font-family: 'Caveat', cursive;
+  font-weight:400;
+}
+.content-wrap{
+  max-width:800px;
+  width: 85%;/* this helps to leave some space at the edge of the page */
+  margin:0 auto;
+  padding: 60px 0;
+}
+h3{
+  margin-bottom: 0;
+}
+.item-details h3+p{
+  font-style: italic;
+}
+.item-details h3~p{
+  margin: 0;
+}
+.divider>section{
+  border-bottom: 1px dashed #343434;
+  padding: 25px 0;
+}
+.divider>section:last-of-type{
+  border-bottom-style: none;
+}
+/* the > sign ensures that the formating is only applied in the section section */
+/* .background1 {
+  background-image:image\20191220_125658.jpg;
+  background-repeat: no-repeat; */
+
+/* Clock styles */
+
+/* this is the clockbox container it also helps in centering the contents */
+.clockbox{
+
+}
+#clock {
+    width: 25%;
+    position: relative;
+    float:right;
+    margin:0 0 0 auto;
+}
+
+/* Clock styles, contains the styling for the circle */
+
+.circle {
+    fill: none;
+    /* this sets the circle to black */
+    stroke: #F7FFF7;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+/* this is the little dot at the center of the clock */
+.mid-circle {
+    fill: #F7FFF7;
+}
+/* this are the ticks around the clockface */
+.hour-marks {
+    fill: none;
+    stroke:#F7FFF7;
+    stroke-width: 9;
+    stroke-miterlimit: 10;
+}
+
+.hour-arm {
+    fill: none;
+    stroke: #F7FFF7;
+    stroke-width: 17;
+    stroke-miterlimit: 10;
+}
+
+.minute-arm {
+    fill: none;
+    stroke: #F7FFF7;
+    stroke-width: 11;
+    stroke-miterlimit: 10;
+}
+
+.second-arm {
+    fill: none;
+    stroke: #F7FFF7;
+    stroke-width: 4;
+    stroke-miterlimit: 10;
+}
+
+/* Transparent box ensuring arms center properly. */
+.sizing-box {
+    fill: none;
+}
+
+/* Make all arms rotate around the same center point. */
+/* Optional: Use transition for animation. */
+#hour,
+#minute,
+#second {
+    transform-origin: 300px 300px;
+    transition: transform .5s ease-in-out;
+    /* this helps to bring out the finesse movement of the minute hand  */
+}
+
+
+/* PROFILE*/
+header{
+  background: #2F3061;
+  color:#F7FFF7;
+
+}
+/* img[src*="image\20191220_125658.jpg"]{
+  width: 800px;
+} */
+/* projects*/
+
+.projects {
+  background:#F7FFF7;
+}
+.projects a{
+color:#2F3061;
+}
+.projects .btn{
+  color: #F7FFF7;
+  background: #2F3061;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 4px;
+  display: inline-block;
+}
+.projects .btn:hover{
+  background: rgba(47,48,97,80%);
+}
+.project-item {
+  overflow: hidden;
+
+}
+
+.project-item h3{
+  margin-top: 0;
+}
+
+/* work experience*/
+.work-experience{
+  background:#A1C607;
+}
+
+
+/* Education*/
+.education{
+  background-image: url(../image/joanna-kosinska-unsplash.jpg);
+  background-size: cover;
+  background-position: top right;
+  padding-bottom: 100px;
+}
+.education p{
+  width: 60%;
+}
+/* @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Pacifico|Source+Code+Pro'); */
+/* FontAwesome cdn fonts */
+/* @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'); */
+/* Comments section */
+/* Sample styling for comments and commenting controls */
+#allcomments {
+
+    width: 90%;
+    margin: 1em 0 4em 1em;
+    padding: 1%;
+    border: solid 1px gray;
+    border-radius: 3px;
+    box-shadow: 2px 2px 2px silver;
+}
+
+ul#pastcomments {
+    list-style-type: none;
+}
+
+ul#pastcomments li :before {
+    font-family: FontAwesome;
+    /* content: "\f075"; */
+    font-size: 24pt;
+    color: gray;
+    margin-left: -42px;
+    padding-right: 10px;
+    position: relative;
+    top: 8px;
+}
+
+ul#pastcomments li {
+    margin: 0 0 2em 0;
+    padding: 10px;
+}
+
+ul#pastcomments  li span {
+    font-size: 80%;
+    color: gray;
+    font-style: italic;
+}
+
+form#newcomment textarea {
+    height: 72px;
+}
+
+form#newcomment label {
+    display: inline-block;
+    margin: 1em 0 0 0;
+}
+
+form#newcomment textarea,
+form#newcomment input[type="text"] {
+    margin-top: 0;
+}
+
+
+
+/* contact Info*/
+footer{
+  background: #343434;
+    color:#F7FFF7;
+
+}
+.contact-list{
+  list-style-type: none;
+  padding:0;
+
+}
+.contact-list a{
+  padding: 15px;
+  display:inline-block;
+}
+
+/* responsive */
+@media screen and(min-width:750px) {
+
+  header,footer{
+  text-align: center;
+  }
+  .project-item img{
+    float: left;
+    margin-right: 20px;
+  }
+  .job-item{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    column-gap:20px;
+  }
+  .contact-list{
+    display: flex;
+    justify-content: center;
+  }
+
+  /* this properties only apply when we have a larger viewport */
+}
+@media screen and(max-width:749px){
+
+  h1{
+    font-size: 75px;
+    line-height: 0.9;
+    margin-bottom: 20px;
+  }
+  h2{
+    line-height: 1;
+  }
+  .contact-list a {
+    padding: 5px;
+  }
+}
